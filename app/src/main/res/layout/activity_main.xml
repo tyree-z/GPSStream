@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="130dp"
+        android:layout_height="21dp"
+        android:text="GPS Datastream"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/optionsTitle"
+        android:layout_width="130dp"
+        android:layout_height="21dp"
+        android:text="Options"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <TextView
+        android:id="@+id/tl_lat"
+        android:layout_width="98dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="23dp"
+        android:text="Latitude:"
+        app:layout_constraintBottom_toTopOf="@+id/tl_long"
+        app:layout_constraintEnd_toStartOf="@+id/td_lat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle" />
+
+    <TextView
+        android:id="@+id/td_lat"
+        android:layout_width="233dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="44dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/td_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tl_lat"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle" />
+
+    <TextView
+        android:id="@+id/tl_long"
+        android:layout_width="98dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:text="Longitude:"
+        app:layout_constraintBottom_toTopOf="@+id/tl_alti"
+        app:layout_constraintEnd_toStartOf="@+id/td_long"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_lat" />
+
+    <TextView
+        android:id="@+id/td_long"
+        android:layout_width="233dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="44dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/td_alti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tl_long"
+        app:layout_constraintTop_toBottomOf="@+id/td_lat" />
+
+    <TextView
+        android:id="@+id/tl_alti"
+        android:layout_width="98dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:text="Altitude:"
+        app:layout_constraintBottom_toTopOf="@+id/tl_accur"
+        app:layout_constraintEnd_toStartOf="@+id/td_alti"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_long" />
+
+    <TextView
+        android:id="@+id/td_alti"
+        android:layout_width="233dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="44dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/td_accur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tl_alti"
+        app:layout_constraintTop_toBottomOf="@+id/td_long" />
+
+    <TextView
+        android:id="@+id/tl_accur"
+        android:layout_width="98dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:text="Accuracy(m):"
+        app:layout_constraintBottom_toTopOf="@+id/tl_speed"
+        app:layout_constraintEnd_toStartOf="@+id/td_accur"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_alti" />
+
+    <TextView
+        android:id="@+id/td_accur"
+        android:layout_width="233dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="44dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/td_speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tl_accur"
+        app:layout_constraintTop_toBottomOf="@+id/td_alti" />
+
+    <TextView
+        android:id="@+id/tl_speed"
+        android:layout_width="98dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:text="Speeed:"
+        app:layout_constraintBottom_toTopOf="@+id/tl_location"
+        app:layout_constraintEnd_toStartOf="@+id/td_speed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_accur" />
+
+    <TextView
+        android:id="@+id/td_speed"
+        android:layout_width="233dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="44dp"
+        android:text="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/td_locationGeocode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tl_speed"
+        app:layout_constraintTop_toBottomOf="@+id/td_accur" />
+
+    <TextView
+        android:id="@+id/tl_location"
+        android:layout_width="98dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="71dp"
+        android:text="Location:"
+        app:layout_constraintBottom_toTopOf="@+id/mainDiv"
+        app:layout_constraintEnd_toStartOf="@+id/td_locationGeocode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_speed" />
+
+    <TextView
+        android:id="@+id/td_locationGeocode"
+        android:layout_width="233dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="71dp"
+        android:text="null"
+        app:layout_constraintBottom_toTopOf="@+id/mainDiv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tl_location"
+        app:layout_constraintTop_toBottomOf="@+id/td_speed" />
+
+    <View
+        android:id="@+id/mainDiv"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="7dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/optionsTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_location" />
+
+    <TextView
+        android:id="@+id/tl_locationStream"
+        android:layout_width="150dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:text="Location Stream Off"
+        app:layout_constraintBottom_toTopOf="@+id/tl_batterySaver"
+        app:layout_constraintEnd_toStartOf="@+id/sw_locationUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTitle" />
+
+    <TextView
+        android:id="@+id/tl_batterySaver"
+        android:layout_width="150dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="371dp"
+        android:text="Battery Saver On"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sw_batterySaver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_locationStream" />
+
+    <Switch
+        android:id="@+id/sw_batterySaver"
+        android:layout_width="53dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="371dp"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tl_batterySaver"
+        app:layout_constraintTop_toBottomOf="@+id/sw_locationUpdate"
+        tools:checked="true" />
+
+    <Switch
+        android:id="@+id/sw_locationUpdate"
+        android:layout_width="53dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="44dp"
+        android:checked="false"
+        app:layout_constraintBottom_toTopOf="@+id/sw_batterySaver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tl_locationStream"
+        app:layout_constraintTop_toBottomOf="@+id/mainDiv"
+        tools:checked="false" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

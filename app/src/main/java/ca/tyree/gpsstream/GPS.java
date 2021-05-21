@@ -26,4 +26,5 @@ public class GPS extends MainActivity {
         //super.onCreate();
         singular = this;
     }
+
 }
